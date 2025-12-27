@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Realtime Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button onclick="toggleDark()">🌙</button>
+
+    <div class="chat-container">
+      <h2>Realtime Chat</h2>
+
+      <div id="users"></div>
+      <div id="messages"></div>
+
+      <div class="emoji">
+        <span onclick="addEmoji('😀')">😀</span>
+        <span onclick="addEmoji('😂')">😂</span>
+        <span onclick="addEmoji('❤️')">❤️</span>
+      </div>
+
+      <input id="msg" placeholder="Type message" />
+      <button onclick="send()">Send</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
